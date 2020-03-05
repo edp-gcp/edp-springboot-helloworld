@@ -2,21 +2,21 @@ name: edp-springboot-helloworld
 namespace: ""
 cdPipelineName: ""
 cdPipelineStageName: ""
-dnsWildcard: eks-delivery.aws.main.edp.projects.epam.com
+dnsWildcard: gcp.edp-epam.com
 
 
 database:
   required: true
   version: postgres:9.6
-  storageClass: gp2
-  capacity: 5Gi
+  storageClass: standard
+  capacity: 1Mi
 
 
 
 ingress:
   required: true
-  site: test
-  path: /api/hello
+  site: helloworld
+  path: /
 
 image:
   name: edp-springboot-helloworld
